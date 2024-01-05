@@ -1,25 +1,45 @@
-.container{
-    align-items: center;
-    margin-left: 200px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    
-  
+.container {
+  align-items: center;
+  margin-left: 200px;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
-.box{
-    margin-left: 100px;
-    width: 900px;
-    height: 250px;
-    background-color: yellow;
-    border-radius: 10px;
-    border-color: black;
-border-bottom: brown;
+.box {
+  margin-left: 100px;
+  width: 900px;
+  height: 250px;
+  background-color: aqua;
+  border-radius: 10px;
+  border-color: black;
+  border-bottom: brown;
+  display: flex;
 }
 
-.box img{
-    margin-top: 20px;
-    height: 200px;
-    width: 200px;
-    margin-left:10px ;
-    
+.box img {
+  margin-top: 20px;
+  height: 200px;
+  width: 200px;
+  margin-left: 10px;
+}
+.Title {
+  height: 100px;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: medium;
+}
+.Title h1 {
+  margin-top: 40px;
+  margin-left: 20px;
+  
+}
+
+
+.discription {
+  max-width: 400px;
+  margin-bottom: 150px;
+  margin-top: 50px;
+  width: auto;
+  height: 150px;
+  overflow: scroll;
+  margin-left:100px ;
 }

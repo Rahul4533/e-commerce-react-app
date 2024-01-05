@@ -5,37 +5,43 @@ export default function Home() {
   useEffect(() => {
     async function FetchData() {
       try {
-       
-       const response=await fetch("https://fakestoreapi.com/products");
-       if(!response.ok){
-        throw new Error("Not Abel to fetch the data !!");
-       }
+        const response = await fetch("https://fakestoreapi.com/products");
+        if (!response.ok) {
+          throw new Error("Not Abel to fetch the data !!");
+        }
 
-       const result=await response.json();
-       setProducts(result);
+        const result = await response.json();
+        setProducts(result);
       } catch (error) {
         console.log(error.message);
-
       }
     }
 
     FetchData();
   }, []);
-  return <>
-  {
-     Products.map((products)=>{
-     return (
-     <div className="container">
-      <div className="box">
-      <img src={products.image}alt="products" />
-      </div>
-      
-     </div>
-     )
-     }
-     
-     )
+  console.log(Products);
+  return (
+    <>
+      {Products.map((products, i) => {
+        return (
+          <div className="container" key={i}>
+            <div className="box">
+              <img src={products.image} alt="products" />
 
-  }
-  </>;
+              <div className=" Title">
+               <h3>{products.title}</h3> 
+               <h1>{'\u20B9'+ products.price}</h1> 
+              </div>
+            
+              <div className="discription">
+             {"Descriptions:"}<br/>
+                {products.description}
+
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </>
+  );
 }
