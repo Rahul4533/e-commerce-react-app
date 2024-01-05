@@ -1,0 +1,25 @@
+.container{
+    align-items: center;
+    margin-left: 200px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    
+  
+}
+.box{
+    margin-left: 100px;
+    width: 900px;
+    height: 250px;
+    background-color: yellow;
+    border-radius: 10px;
+    border-color: black;
+border-bottom: brown;
+}
+
+.box img{
+    margin-top: 20px;
+    height: 200px;
+    width: 200px;
+    margin-left:10px ;
+    
+}
