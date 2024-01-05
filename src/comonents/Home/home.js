@@ -4,6 +4,7 @@ import StarRating from "./starrating";
 export default function Home() {
   const [Products, setProducts] = useState([]);
   useEffect(() => {
+    // fetch data
     async function FetchData() {
       try {
         const response = await fetch("https://fakestoreapi.com/products");
@@ -30,16 +31,16 @@ export default function Home() {
               <img src={products.image} alt="products" />
 
               <div className=" Title">
-               <h3>{products.title}</h3> 
-               <h1>{'\u20B9'+ products.price}</h1> 
+                <h3>{products.title}</h3>
+                <h1>{"\u20B9" + products.price}</h1>
 
-               <StarRating rating={products.rating.rate}/>
+                <StarRating rating={products.rating.rate} />
               </div>
-            
-              <div className="discription">
-             {"Descriptions:"}<br/>
-                {products.description}
 
+              <div className="discription">
+                {"Descriptions:"}
+                <br />
+                {products.description}
               </div>
             </div>
           </div>
