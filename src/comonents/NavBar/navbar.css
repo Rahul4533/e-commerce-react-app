@@ -1,0 +1,38 @@
+.nav-bar{
+    width: auto;
+    height: 70px ;
+    background: linear-gradient(#e74c3c, #f39c12);
+    display:flex;
+    align-items: center;
+    padding-left: 10px;
+
+    
+}
+.nav-bar h4{
+    margin-left: 10px;
+}
+.nav-bar img{
+    height: 30px;
+    padding-left: 6px;
+    cursor: pointer;
+}
+.user{
+    padding-left: 800px;
+    display: flex;
+}
+.user h3{
+  margin-left: 100px;
+    padding-right: 10px ;
+
+}
+
+.user img{
+     height: 65px;
+     cursor: pointer;
+}
+.user img:hover{
+    content: attr(title);
+    visibility: visible;
+}
+
+
