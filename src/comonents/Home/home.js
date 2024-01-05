@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./home.css";
+import StarRating from "./starrating";
 export default function Home() {
   const [Products, setProducts] = useState([]);
   useEffect(() => {
@@ -31,6 +32,8 @@ export default function Home() {
               <div className=" Title">
                <h3>{products.title}</h3> 
                <h1>{'\u20B9'+ products.price}</h1> 
+
+               <StarRating rating={products.rating.rate}/>
               </div>
             
               <div className="discription">
