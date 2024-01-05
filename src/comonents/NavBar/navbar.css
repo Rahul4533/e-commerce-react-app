@@ -1,15 +1,19 @@
 .nav-bar{
-    width: auto;
-    height: 70px ;
-    background: linear-gradient(#e74c3c, #f39c12);
-    display:flex;
-    align-items: center;
-    padding-left: 10px;
+    background-color: #3498db;
+  padding: 15px;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
     
 }
 .nav-bar h4{
     margin-left: 10px;
+    
+}
+.nav-bar h4:hover{
+    text-decoration: underline
 }
 .nav-bar img{
     height: 30px;
