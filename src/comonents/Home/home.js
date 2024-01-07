@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { productsReducer,productsActions } from "../../redux/reducers/productsreducer";
 import "./home.css";
 import StarRating from "./starrating";
 export default function Home() {
+  const dispatch=useDispatch();
   const [Products, setProducts] = useState([]);
   useEffect(() => {
     // fetch data
