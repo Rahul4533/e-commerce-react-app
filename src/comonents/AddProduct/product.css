@@ -1,0 +1,25 @@
+
+.products{
+    
+    width: 700px;
+    height: auto;
+    background:linear-gradient(to bottom, #ffffff, #f0f0f0);
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding-left: 2cm;
+    
+}
+.products input{
+    width: 300px;
+    height: 35px;
+}
+.products button{
+    width: 2cm;
+    height: 1cm;
+    font-size: large;
+    margin-left: 14cm;
+    cursor: pointer;
+}

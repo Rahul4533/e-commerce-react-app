@@ -45,7 +45,7 @@ body{
 
 
 .discription {
-  max-width: 400px;
+  
   margin-bottom: 150px;
   margin-top: 50px;
   width: auto;
@@ -53,6 +53,8 @@ body{
   overflow: scroll;
   margin-left:100px ;
  font-size:  1rem;
+ 
+ 
 }
 /* styles.css */
 
@@ -72,3 +74,11 @@ body{
     margin-bottom: 20px;
   }
   
+  .pencile img{
+    height: 30px;
+    width: 30px;
+    margin-top: 5.75cm;
+    margin-right: 1cm;
+    cursor: pointer;
+   
+  }

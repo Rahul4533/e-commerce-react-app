@@ -35,14 +35,24 @@ export default function Home() {
                 <h1>{"\u20B9" + products.price}</h1>
 
                 <StarRating rating={products.rating.rate} />
+                
               </div>
 
-              <div className="discription">
+              <div     className="discription">
+               
                 {"Descriptions:"}
                 <br />
                 {products.description}
+                
+              </div>
+              
+                
+              <div className="pencile">
+              <img  src="https://cdn-icons-png.flaticon.com/128/588/588395.png" alt="pencile" />
               </div>
             </div>
+            
+            
           </div>
         );
       })}
