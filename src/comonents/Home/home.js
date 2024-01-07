@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { productsReducer,productsActions } from "../../redux/reducers/productsreducer";
+import { productsActions } from "../../redux/reducers/productsreducer";
+import { useSelector } from "react-redux";
 import "./home.css";
 import StarRating from "./starrating";
 export default function Home() {
   const dispatch=useDispatch();
+  const Item=useSelector((state)=> state.productsReducer.data);
+  console.log(Item);
   const [Products, setProducts] = useState([]);
   useEffect(() => {
     // fetch data
@@ -23,11 +26,11 @@ export default function Home() {
     }
 
     FetchData();
-  }, []);
-  console.log(Products);
+  }, [dispatch]);
+  dispatch(productsActions.products(Products))
   return (
     <>
-      {Products.map((products, i) => {
+      {Item.map((products, i) => {
         return (
           <div className="container" key={i}>
             <div className="box">
