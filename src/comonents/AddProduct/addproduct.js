@@ -4,9 +4,9 @@ import "./product.css";
 export default function Products() {
   const [name, setName] = useState("");
   const [des, setDes] = useState("");
-  const [price, setPrice] = useState(null);
-  const [rate, setRate] = useState(null);
-  console.log(name,des,price,rate);
+  const [price, setPrice] = useState(0);
+  const [rate, setRate] = useState(0);
+  
 
   const handelform=(e)=>{
     e.preventDefault();
