@@ -4,12 +4,11 @@ import { productsActions } from "../../redux/reducers/productsreducer";
 import { useSelector } from "react-redux";
 import "./home.css";
 import StarRating from "./starrating";
-import { Outlet } from "react-router-dom";
 export default function Home() {
-  console.log("home Com");
+ 
   const dispatch = useDispatch();
   const Item = useSelector((state) => state.productsReducer.data);
-  console.log(Item);
+  
   const [Products, setProducts] = useState([]);
   useEffect(() => {
     // fetch data
@@ -21,19 +20,20 @@ export default function Home() {
         }
 
         const result = await response.json();
-        setProducts(result);
+        return result;
       } catch (error) {
         console.log(error.message);
       }
     }
 
-    FetchData();
+    FetchData().then((data)=>{setProducts(data)});
   }, []);
   dispatch(productsActions.products(Products));
+  console.log(Item);
   return (
     <>
       <div>
-        {Products.map((products, i) => {
+        {Item.map((products, i) => {
           return (
             <div className="container" key={i}>
               <div className="box">
@@ -62,7 +62,7 @@ export default function Home() {
             </div>
           );
         })}
-        <Outlet />
+        
       </div>
     </>
   );

@@ -6,7 +6,6 @@ import { store } from "./redux/store/store";
 import {
   createBrowserRouter,
   Route,
-  Router,
   RouterProvider,
   createRoutesFromElements,
 } from "react-router-dom";
@@ -32,6 +31,7 @@ export default function App() {
   const route = createRoutesFromElements(
     <Route path="/" element={<Navbar />}>
       <Route index={true} element={<Home />} />
+      <Route path="add" element={<Products />} />
     </Route>
   );
   const router = createBrowserRouter(route);
