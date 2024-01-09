@@ -5,7 +5,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
     
 }
 .nav-bar h4{
@@ -38,5 +37,14 @@
     content: attr(title);
     visibility: visible;
 }
+.alert{
+    height: 3cm;
+    width: 60%;
+    background-color: aqua;
+    margin-left: 1cm;
+    align-items: center;
+
+}
+
 
 

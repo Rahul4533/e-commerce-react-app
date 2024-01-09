@@ -1,14 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { productsActions } from "./productsreducer";
 
+
+const initialState={
+    message: "",
+}
+
   const  notifySlice=createSlice({
     name:"Notify",
-    initialState:{
-        message: ""
-    },
+    initialState,
     reducers:{
-       Add :(state,action)=>{
-              state.message="Products Added SuucessFully"
+         reset :(state,action)=>{
+              state.message="";
        }
     },
     extraReducers: (builder)=>{
@@ -17,5 +20,5 @@ import { productsActions } from "./productsreducer";
 
 })
 
-export  const notifictionReducers=notifySlice.reducer;
+export  const Reducers=notifySlice.reducer;
 export const notificationAction=notifySlice.actions;

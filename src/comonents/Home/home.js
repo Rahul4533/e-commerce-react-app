@@ -8,8 +8,26 @@ export default function Home() {
  
   const dispatch = useDispatch();
   const Item = useSelector((state) => state.productsReducer.data);
-  
+  const [searchdata,setSearchdata]=useState("");
   const [Products, setProducts] = useState([]);
+
+   
+
+   //Search Function To Filter the Result based on the User Input
+
+   function searchProduct() {
+  const FilterProducts=  Item.filter((product) =>
+    product.category.toLowerCase().includes(searchdata.toLowerCase())
+  );
+    
+     setProducts(FilterProducts);
+   }
+
+   
+
+
+
+
   useEffect(() => {
     // fetch data
     async function FetchData() {
@@ -27,11 +45,17 @@ export default function Home() {
     }
 
     FetchData().then((data)=>{setProducts(data)});
-  }, []);
+  }, [searchdata]);
   dispatch(productsActions.products(Products));
   console.log(Item);
   return (
     <>
+      <div className="search">
+        <input type="text" placeholder="Search"
+        value={searchdata} onChange={(e)=>setSearchdata(e.target.value)}
+        />
+        <button onClick={searchProduct}>Search</button>
+      </div>
       <div>
         {Item.map((products, i) => {
           return (
