@@ -28,6 +28,8 @@ body{
   margin-top: 10px;
   height: 210px;
   width: 210px;
+  object-fit: cover;
+  
 }
 .Title {
   height: 100px;
@@ -41,6 +43,9 @@ body{
   font-size: 1.5rem;
   color: #ff6347;
   
+}
+.Title h2{
+  color: blue;
 }
 
 
