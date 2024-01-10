@@ -51,10 +51,12 @@ export default function Home() {
   return (
     <>
       <div className="search">
-        <input type="text" placeholder="Search"
+       <h1><input type="text" placeholder="Search"
         value={searchdata} onChange={(e)=>setSearchdata(e.target.value)}
+        
         />
-        <button onClick={searchProduct}>Search</button>
+         <button onClick={searchProduct}>Search</button></h1>
+       
       </div>
       <div>
         {Item.map((products, i) => {

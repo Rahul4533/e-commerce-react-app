@@ -82,3 +82,22 @@ body{
     cursor: pointer;
    
   }
+
+  .search{
+    margin-left: 15cm;
+    margin-top: 10px;
+   align-items: center;
+
+  }
+  .search input{
+    height: 20px;
+    width: 5cm;
+    border-radius: 10px;
+    padding-left: 10px;
+  }
+
+  .search button{
+    border-radius: 5px;
+    width: 60px;
+    margin-left: 5px;
+  }
