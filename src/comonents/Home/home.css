@@ -88,11 +88,8 @@ body{
    
   }
 
-<<<<<<< HEAD
   .search{
-=======
-.search{
->>>>>>> origin/master
+
     margin-left: 15cm;
     margin-top: 10px;
    align-items: center;
@@ -109,9 +106,9 @@ body{
     border-radius: 5px;
     width: 60px;
     margin-left: 5px;
-<<<<<<< HEAD
-  }
-=======
     cursor: pointer;
   }
->>>>>>> origin/master
+
+    
+  
+
